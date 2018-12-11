@@ -1,0 +1,8 @@
+{
+    "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AzureWebJobsDashboard": "UseDevelopmentStorage=true",
+    "AzureQueueStorage": "DefaultEndpointsProtocol=https;AccountName=imagestoreisze;AccountKey=36xZi6b1NlmOnjN404YnTSEceYjd7Z0i3xmdRK8HShgvkqAgHXPfX0ZtZ0H0EltCkooDM66E4wNfq17b2xzJ6A==;EndpointSuffix=core.windows.net"
+  }
+}
