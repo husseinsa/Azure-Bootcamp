@@ -1,5 +1,5 @@
 # Azure Bootcamp
-Azure Boot-camp exercises. Below are simple excerises for attendees to try out during the bootcamp to get better understanding of the services explained. 
+Below are simple excersises for attendees to try out during the bootcamp to get better understanding of the services explained. 
 
 ## Azure Web Apps
 1.	Create an Azure Web App 
