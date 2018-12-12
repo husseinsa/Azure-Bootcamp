@@ -1,6 +1,55 @@
 # Azure-Bootcamp
 Azure Boot-camp  Exercises 
 
+## Azure Web Apps
+1.	Create an Azure Web App 
+     - Create a new service plan
+          - Choose the Free tier
+2.   Create a new web application using visual studio
+     - ASP.NET Core Web Application
+     - Web Application (Model-View-Controller)
+3.   Publish the  web application to the newly created Azure Web app
+     - In Azure portal, go to your Web app and navigate to the overview blade
+     - Download the publish profile (Get Publish Profile)
+     - In Visual Studio, publish your application by importing the downloaded publish profile
+     
+4.   Create a new deployment slot
+     - Scale up your service plan (select a service plan that provides deployment slots feature)
+     - Add new slot `Staging` to your Azure web app 
+     - In visual studio, go to your web.config and add a new key to your application settings section
+     - In Azure Portal,  Add the same key to the two deployment slots (Production and Staging). 
+         -  Settings -> Application Settings -> Add new setting (check the Slot Setting)
+5.   Change your application code to display the message in your home page
+     - Add the code to read the app setting in the HomeController
+      
+ 
+      private readonly IConfiguration config;
+        public HomeController(IConfiguration configuration)
+        {
+            this.config = configuration;
+        }
+        public IActionResult Index()
+        {
+            var msg = config["MyMessage"];
+            return View("Index", msg);
+        }
+
+     - Add the code to display your app setting key in `Index.cshtml`  (Views-> Home -> Index.cshtml)
+    
+       ```
+         @model string
+         @{
+             ViewData["Title"] = "Home Page";
+          }
+         <h1> @Model </h1>
+       ```  
+6.  Swap deployment slots
+     - Using visual studio, Deploy the application (modified version) to the staging deployment slot
+     - Browse the staging web site to see your `MyMessage` value show up in your index page
+     - Swap the slots (Staging <-> Production)
+          - Browse your production site to see how it affects the site (it will reads you app setting key)
+          - Browse to your staging site, see the old code version after swap happened
+     
 ## Azure Blob Exercise
 1.	Create a new storage account
      - Account Kind: Blob Storage
