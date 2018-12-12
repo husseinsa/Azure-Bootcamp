@@ -1,4 +1,4 @@
-# Azure-Bootcamp
+# Azure Bootcamp
 Azure Boot-camp  Exercises 
 
 ## Azure Web Apps
@@ -49,7 +49,24 @@ Azure Boot-camp  Exercises
      - Swap the slots (Staging <-> Production)
           - Browse your production site to see how it affects the site (it will reads you app setting key)
           - Browse to your staging site, see the old code version after swap happened
-     
+    
+    
+    
+## Cosmo DB
+1.   Create a Cosmo DB Account, Database, Collection
+     - Choose the SQL API (JSON documents)
+     - Create a document database collection
+          - Database: Tasks
+          - Collection: Items
+2.  Complete the code to insert and retrieve document from Cosmos DB collection
+     - Open Web application “CosmoDBApp” (find it in the repo)
+     - Install the NuGet package:  Microsoft.Azure.DocumentDB.Core
+     - Add required parameters (URI, Key) to initiate a connection to your collection
+     - Modify the two methods in the “ItemsStore” class
+          - Insert sample items in Cosmo DB  (Items)
+          - Retrieve items from Cosmo DB
+    
+    
 ## Azure Blob Exercise
 1.	Create a new storage account
      - Account Kind: Blob Storage
