@@ -50,8 +50,13 @@ Below are simple excersises for attendees to try out during the bootcamp to get 
           - Browse your production site to see how it affects the site (it will reads you app setting key)
           - Browse to your staging site, see the old code version after swap happened
     
-    
-    
+7.  Test scaling
+    - Add the following code to your Index.cshtml
+       ```
+          <h2>Web App Instance ID: @Environment.GetEnvironmentVariable("WEBSITE_INSTANCE_ID")</h2>
+       ```
+    - Manually scale your instances to 3
+    - Browse the index page, and check the web instance id serving your request changes.
 ## Cosmo DB
 1.   Create a Cosmo DB Account, Database, Collection
      - Choose the SQL API (JSON documents)
